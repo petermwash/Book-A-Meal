@@ -1,0 +1,56 @@
+/*========signin and signup==============*/
+/*styling the form*/
+form {
+	border: 1px solid;
+	padding: 30px;
+	font-size: 120%;
+	
+}
+
+html,body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
+body {
+	display: flex;
+}
+
+/*centering the form*/
+.frm-div{
+	position: absolute;
+	width: 500px;
+	height: 500px;
+	top: 30%;
+	left: 40%;
+	margin-top: -130px;
+	margin-left: -130px;
+	margin-bottom: 15%
+}
+
+
+.space {
+	margin-top: 12px;
+}
+.bg{
+	background-image: url("../media/images/bg.jpg");
+}
+/*sizing the text inputs*/
+.txtbox {
+	font font-size: 30pt;
+	height: 25px;
+	width: 350px;
+}
+/*styling the buttons*/
+#button {
+	background-color: #008CBA;
+	border: none;
+	border-radius: 8px;
+	color: white;
+	padding: 12px 20px;
+	text-align: center;
+	font-size: 18px;
+	transition-duration: 0.4s;
+	width: 75%;
+}
