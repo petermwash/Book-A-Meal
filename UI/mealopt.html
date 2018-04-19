@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Meal options</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+	<header>
+		<div id="fixed">
+			<div class="navbar">
+				<h1>Book-A-Meal</h1>
+				<p id="welcome"><strong>Welcome [User name]</strong></p>
+				<a href="#Signout">Signout</a>
+				<a href="orders.html">View orders</a>
+				<a href="setmenu.html">Setup menu</a>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div>
+			<h2>Manage Meal Options</h2>
+			<div>
+				<table class="style">
+					<thead>
+						<tr>
+							<th>Index</th>
+							<th>Meal Name</th>
+							<th>Meal Price</th>
+							<th>Category</th>
+							<th>Options</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>Meal no.1</td>
+							<td>Ksh 500</td>
+							<td>Hot Drinks</td>
+							<td>
+								<button>Remove</button>
+								<button>Edit</button>
+							</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>Meal no.2</td>
+							<td>Ksh 500</td>
+							<td>Cold Drinks</td>
+							<td>
+								<button>Remove</button>
+								<button>Edit</button>
+							</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>Meal no.3</td>
+							<td>Ksh 500</td>
+							<td>Main Dishes</td>
+							<td>
+								<button>Remove</button>
+								<button>Edit</button>
+							</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>Meal no.4</td>
+							<td>Ksh 500</td>
+							<td>Main Dishes</td>
+							<td>
+								<button>Remove</button>
+								<button>Edit</button>
+							</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td colspan="8">
+								<div> Add more
+										<form action="#!" name="add-a-meal">
+											<div>
+												<label>Meal name: </label>
+												<input type="text" name="m-name" id="m-name" placeholder="Enter meal name" required="required">
+												<label>Meal price: </label>
+												<input type="text" name="m-price" id="m-price" placeholder="Enter meal price" required="required">
+												<label>Meal category: </label>
+												<input type="text" name="m-category" id="m-category" placeholder="Enter meal category" required="required"><br><br>
+												<label for="im">Upload image:</label>
+												<input type="file" name="im" id="im"><br><br>
+												<input type="submit" name="add-meal" value="Add">
+											</div>
+										</form>
+								</div>
+							<div></div>
+							</td>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+		</div>
+	</main>
+	<footer class="page-footer">
+		<div>
+			<p>&copy; Created  with love by <a href="https://ke.linkedin.com/in/peter-mwaura-87b423107" target="_blank">pemwa</a></p>
+		</div>
+	</footer>
+</body>
+</html>
