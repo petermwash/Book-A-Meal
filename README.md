@@ -1,9 +1,9 @@
 # Book-A-Meal
 Book-A-Meal is an application that allows customers to make food orders and helps the food vendor know what the customers want to eat.
 
-# Github pages
+## Github pages
 
-To view template pages of the Book-A-Meal app on the gh-pages, click on the "Templates" link below.
+To view my user interface pages of the App on the github pages, click on the "Templates" link below.
 
 
 [Templates](https://petermwash.github.io/Book-A-Meal/)
