@@ -76,6 +76,21 @@ class Meals(Resource):
 		response.status_code = 201
 		return response
 
+	
+
+
+class SingleMeal(Resource):
+	def get(self, meal_id):
+		for meal in meals:
+			if meal.meal_id == meal_id:
+				meal_schema = MealSchema(many=True).dump(meals)
+				response = jsonify(meal_schema.data)
+				response.status_code = 200
+				return response
+			response = jsonify({"message": "Not found"})
+			response.status_code = 404
+			return response
+
 	def put(self, meal_id):
 		for meal in meals:
 			if meal.meal_id == meal_id:
@@ -89,18 +104,6 @@ class Meals(Resource):
 		response = jsonify({"message": "Meal updated"})
 		response.status_code = 200
 		return response
-
-
-class SingleMeal(Resource):
-	def get(self, meal_id):
-		for meal in meals:
-			if meal.meal_id == meal_id:
-				response = jsonify(meal)
-				response.status_code = 200
-				return response
-			response = jsonify({"message": "Not found"})
-			response.status_code = 404
-			return response
 		
 
 api.add_resource(UserSignup, '/api/v1/signup')
