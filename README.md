@@ -1,7 +1,7 @@
 # Book-A-Meal
 Book-A-Meal is an application that allows customers to make food orders and helps the food vendor know what the customers want to eat.
 
-##Runing the tests
+## Runing the tests
 
 To run the tests for tis application you should have Pyhton3 installed in your machine.If you do not have have it yet you can install python3 by running the following commands on linux
 '''
