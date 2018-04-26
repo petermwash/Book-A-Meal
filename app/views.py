@@ -3,11 +3,14 @@ from flask_restful import Resource, Api
 import json
 
 from app.models.users import User, UserSchema
+
 from app.models.meals import Meal, MealSchema
 from app.models.orders import Order
 
+
 app = Flask(__name__)
 api = Api(app)
+
 
 users = [
 User(1, "pe", "mw", "pe@gm.cm", "pp", "123")
@@ -110,3 +113,8 @@ api.add_resource(UserSignup, '/api/v1/signup')
 api.add_resource(UserSignin, '/api/v1/signin/<int:u_id>')
 api.add_resource(Meals, '/api/v1/meals')
 api.add_resource(SingleMeal, '/api/v1/meals/<int:meal_id>')
+
+
+if __name__ == '__main__':
+	app.run()
+
