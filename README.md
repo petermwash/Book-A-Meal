@@ -49,7 +49,7 @@ You will a message as the one shown bellow
 copy the URL and paste it on postman. Now you can test the various api endpoints by select the appropiate method on poatman.
 
 
-##Runing the tests
+## Runing the tests
 
 To run the tests for tis application you should have Pyhton3 installed in your machine.If you do not have have it yet you can install python3 by running the following commands on linux
 '''
