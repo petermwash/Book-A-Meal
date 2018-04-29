@@ -1,0 +1,18 @@
+language: python
+python:
+    - "2.7"
+    - "3.6"
+
+#to install dependancies
+install:# command to install dependencies
+install:
+  - pip install .
+  - pip install -r requirements.txt
+
+#to run tests
+script:
+    - nosetests tests
+
+#to run coverage tests
+after_success: 
+    - coveralls
