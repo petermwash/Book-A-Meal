@@ -7,9 +7,11 @@ class Order(object):
 	order_items = {}
 	
 	def __init__(self, order_owner_name, meal_name, quantity):
-		self.order_id = random.randint(1, 500)
+		self.order_id = 1 #random.randint(1, 500)
 		self.order_owner_id = order_owner_name
-		self.order_items[meal_name] = quantity
+		self.meal_name = meal_name
+		self.quantity = quantity
+		#elf.order_items[meal_name] = quantity
 		self.ordered_on = datetime.today()
 
 	def __repr__(self):

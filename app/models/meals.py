@@ -4,7 +4,7 @@ import random
 class Meal(object):
 	
 	def __init__(self, meal_name, meal_category, meal_price):
-		self.meal_id = random.randint(1, 500)
+		self.meal_id = 1 #random.randint(1, 500)
 		self.meal_name = meal_name
 		self.meal_category = meal_category
 		self.meal_price = meal_price
