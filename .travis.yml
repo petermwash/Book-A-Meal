@@ -14,7 +14,7 @@ script:
 
 #to run coverage tests
 after_success: 
-    - coveralls
+    -coveralls
 
 cache:
     -pip
