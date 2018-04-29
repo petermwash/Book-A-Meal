@@ -4,10 +4,10 @@ python:
     - "3.6"
 
 #to install dependancies
-install:# command to install dependencies
 install:
-  - pip install .
-  - pip install -r requirements.txt
+    - export FLASK_APP="run.py"
+    
+    - pip install -r requirements.txt
 
 #to run tests
 script:
