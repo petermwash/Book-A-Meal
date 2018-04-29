@@ -1,6 +1,9 @@
 # Book-A-Meal
-Book-A-Meal is an application that allows customers to make food orders and helps the food vendor know what the customers want to eat.
 [![Build Status](https://travis-ci.org/petermwash/Book-A-Meal.svg?branch=master)](https://travis-ci.org/petermwash/Book-A-Meal)
+[![Coverage Status](https://coveralls.io/repos/github/petermwash/Book-A-Meal/badge.svg?branch=master)](https://coveralls.io/github/petermwash/Book-A-Meal?branch=master)
+
+
+Book-A-Meal is an application that allows customers to make food orders and helps the food vendor know what the customers want to eat.
 
 
 ## Runing the API
