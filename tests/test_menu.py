@@ -41,3 +41,7 @@ class MenuTestCase(unittest.TestCase):
 		self.assertEqual(response.status_code, 201)
 		response = self.app.get('/api/v1/orders')
 		self.assertEqual(response.status_code, 200)
+
+if __name__ == '__main__':
+	unittest.main()
+
