@@ -1,6 +1,5 @@
 language: python
 python:
-    - "2.7"
     - "3.6"
 
 #to install dependancies
@@ -16,3 +15,6 @@ script:
 #to run coverage tests
 after_success: 
     - coveralls
+
+cache:
+    -pip
