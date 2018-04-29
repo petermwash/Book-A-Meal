@@ -92,3 +92,4 @@ To view my user interface pages of the App on the github pages, click on the "Te
 
 ![alt text](https://raw.githubusercontent.com/petermwash/Book-A-Meal/master/eg-img.png))
 
+![screenshot](https://raw.githubusercontent.com/petermwash/Book-A-Meal/chore-tests/tests-img.png)
