@@ -30,4 +30,4 @@ $ nosetests tests
 
 The tests should fail and you should see somthing  like the screenshot shown bellow
 
-![screenshot](https://raw.githubusercontent.com/petermwash/Book-A-Meal/chore-tests/tests-img.png))
+![screenshot](https://raw.githubusercontent.com/petermwash/Book-A-Meal/chore-tests/tests-img.png)
