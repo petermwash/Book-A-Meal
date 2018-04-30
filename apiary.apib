@@ -1,0 +1,78 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# Book-A-Meal
+
+Book-A-Meal is a simple API allowing consumers to view the schema for the inputs and outputs of data.
+
+## Questions Collection [/questions]
+
+### get the menu for the day [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                
+                    {
+                        "meal_id": 5,
+                        "meal_name": "burger",
+                        "meal_category": "snacks",
+                        "meal_price": 400.00
+                    }, {
+                        "meal_id": 8,
+                        "meal_name": "pizza",
+                        "meal_category": "main dish",
+                        "meal_price": 900.00
+                    }, {
+                        "meal_id": 15,
+                        "meal_name": "wine",
+                        "meal_category": "drinks",
+                        "meal_price": 850.00
+                    }, {
+                        "meal_id": 2,
+                        "meal_name": "beef",
+                        "meal_category": "main dish",
+                        "meal_price": 700.00
+                    }
+            }
+        ]
+
+### make an order [POST]
+
+
++ Request (application/json)
+
+
+        {
+                        "meal_id": 5,
+                        "meal_name": "burger",
+                        "meal_category": "snacks",
+                        "meal_price": 400.00
+                    }, {
+                        "meal_id": 8,
+                        "meal_name": "pizza",
+                        "meal_category": "main dish",
+                        "meal_price": 900.00
+                    }
+
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /questions/2
+
+    + Body
+
+            {
+            "order_id": 502,
+            "owner_name": "peter",
+            "order_item": {
+                "burger": 4,
+                "Rice": 2,
+                "pizza": 3,
+            },
+            "ordered_on": "2015-08-05T08:40:51.620Z"
+            
+            }
