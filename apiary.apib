@@ -1,13 +1,130 @@
 FORMAT: 1A
-HOST: http://polls.apiblueprint.org/
+HOST: http://bookameal7.apiblueprint.org/
 
 # Book-A-Meal
 
 Book-A-Meal is a simple API allowing consumers to view the schema for the inputs and outputs of data.
 
-## Questions Collection [/questions]
+## UserSign up Collection [/api/v1/signup]
 
-### get the menu for the day [GET]
+### User sign up [POST]
+
++ Request (application/json)
+
+
+        {
+                        "f_name": "Peter",
+                        "l_name": "Mwaura",
+                        "email": "pemwa@me.com",
+                        "u_name": "pemwa"'
+                        "password": "mypass"
+                    }, 
+
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /users/signup
+
+    + Body
+
+            {
+            "meassage": "User created"
+            }
+            
+            }
+            
+## UserSign in Collection [/api/v1/signin]
+
+### User sign in [POST]
+
++ Request (application/json)
+
+
+        {
+                        
+                        "u_name": "pemwa"'
+                        "password": "mypass"
+                    }, 
+
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /api/v1/signuin
+
+    + Body
+
+            {
+            "meassage": "User loged in"
+            }
+            
+            }
+
+## Meals Collection [/api/v1/meals]
+
+### create meal options [POST]
+
+
+            {
+                
+                    {
+                        "meal_name": "burger",
+                        "meal_category": "snacks",
+                        "meal_price": 400.00
+                    }, {
+                        "meal_name": "pizza",
+                        "meal_category": "main dish",
+                        "meal_price": 900.00
+                    }, {
+                        "meal_name": "wine",
+                        "meal_category": "drinks",
+                        "meal_price": 850.00
+                    }, {
+                        "meal_name": "beef",
+                        "meal_category": "main dish",
+                        "meal_price": 700.00
+                    }
+            }
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /api/v1/meals
+
+    + Body
+
+            {
+                
+                    {
+                        "meal_id": 5,
+                        "meal_name": "burger",
+                        "meal_category": "snacks",
+                        "meal_price": 400.00
+                    }, {
+                        "meal_id": 8,
+                        "meal_name": "pizza",
+                        "meal_category": "main dish",
+                        "meal_price": 900.00
+                    }, {
+                        "meal_id": 15,
+                        "meal_name": "wine",
+                        "meal_category": "drinks",
+                        "meal_price": 850.00
+                    }, {
+                        "meal_id": 2,
+                        "meal_name": "beef",
+                        "meal_category": "main dish",
+                        "meal_price": 700.00
+                    }
+            }
+            
+            }
+
+### get the meal options [GET]
 
 + Response 200 (application/json)
 
@@ -38,41 +155,219 @@ Book-A-Meal is a simple API allowing consumers to view the schema for the inputs
             }
         ]
 
-### make an order [POST]
+## Menu Collection [/api/v1/menu]
+
+### set menu for the day [POST]
 
 
-+ Request (application/json)
-
-
-        {
-                        "meal_id": 5,
+            {
+                
+                    {
+                        "meal_id": 2,
                         "meal_name": "burger",
                         "meal_category": "snacks",
                         "meal_price": 400.00
                     }, {
-                        "meal_id": 8,
+                        "meal_id": 3,
                         "meal_name": "pizza",
                         "meal_category": "main dish",
                         "meal_price": 900.00
+                    }, {
+                        "meal_id": 4,
+                        "meal_name": "wine",
+                        "meal_category": "drinks",
+                        "meal_price": 850.00
+                    }, {
+                        "meal_id": 5,
+                        "meal_name": "beef",
+                        "meal_category": "main dish",
+                        "meal_price": 700.00
                     }
+            }
 
-
-+ Response 201 (application/json)
++ Response 200 (application/json)
 
     + Headers
 
-            Location: /questions/2
+            Location: /api/v1/menu
 
     + Body
 
             {
+                
+                    {
+                        "meal_id": 2,
+                        "meal_name": "burger",
+                        "meal_category": "snacks",
+                        "meal_price": 400.00
+                    }, {
+                        "meal_id": 3,
+                        "meal_name": "pizza",
+                        "meal_category": "main dish",
+                        "meal_price": 900.00
+                    }, {
+                        "meal_id": 4,
+                        "meal_name": "wine",
+                        "meal_category": "drinks",
+                        "meal_price": 850.00
+                    }, {
+                        "meal_id": 5,
+                        "meal_name": "beef",
+                        "meal_category": "main dish",
+                        "meal_price": 700.00
+                    }
+            }
+            
+            }
+
+### get menu for the day [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                
+                    {
+                        "meal_id": 2,
+                        "meal_name": "burger",
+                        "meal_category": "snacks",
+                        "meal_price": 400.00
+                    }, {
+                        "meal_id": 3,
+                        "meal_name": "pizza",
+                        "meal_category": "main dish",
+                        "meal_price": 900.00
+                    }, {
+                        "meal_id": 4,
+                        "meal_name": "wine",
+                        "meal_category": "drinks",
+                        "meal_price": 850.00
+                    }, {
+                        "meal_id": 5,
+                        "meal_name": "beef",
+                        "meal_category": "main dish",
+                        "meal_price": 700.00
+                    }
+            }
+        ]
+        
+### update a meal options [PUT]
+
++ Request (application/json)
+
+        {
+                        "meal_id": 2,
+                        "meal_name": "burger",
+                        "meal_category": "snacks",
+                        "meal_price": 400.00
+                    }
+                    
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /api/v1/meals/2
+
+    + Body
+            
+            {
+                    "Message": "Meal updated"
+                
+            }
+            
+           
+
+## Orders Collection [/api/v1/orders]
+
+### make an order [POST]
+
+
+            {
+                
+                    {
+                        "meal_id": 2,
+                        "meal_name": "burger",
+                        "meal_category": "snacks",
+                        "meal_price": 400.00
+                    }, {
+                        "meal_id": 3,
+                        "meal_name": "pizza",
+                        "meal_category": "main dish",
+                        "meal_price": 900.00
+                    }, {
+                        "meal_id": 4,
+                        "meal_name": "wine",
+                        "meal_category": "drinks",
+                        "meal_price": 850.00
+                    }, {
+                        "meal_id": 5,
+                        "meal_name": "beef",
+                        "meal_category": "main dish",
+                        "meal_price": 700.00
+                    }
+            }
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /api/v1/orders
+
+    + Body
+
+             {
             "order_id": 502,
             "owner_name": "peter",
             "order_item": {
                 "burger": 4,
-                "Rice": 2,
-                "pizza": 3,
+                "pizza": 2,
+                "wine": 3,
+                "beef": 3
+            },
+            "ordered_on": "2018-04-05T08:40:51.620Z"
+            
+            }
+
+### get orders [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                
+                     {
+            "order_id": 502,
+            "owner_name": "peter",
+            "order_item": {
+                "burger": 4,
+                "pizza": 2,
+                "wine": 3,
+                "beef": 3
+            },
+            "ordered_on": "2015-08-05T08:40:51.620Z"
+            
+            }, {
+            "order_id": 502,
+            "owner_name": "Ivy",
+            "order_item": {
+                "burger": 4,
+                "pizza": 2,
+                "wine": 3,
+                "beef": 3
+            },
+            "ordered_on": "2015-08-05T08:40:51.620Z"
+            
+            }, {
+            "order_id": 502,
+            "owner_name": "Ann",
+            "order_item": {
+                "burger": 4,
+                "pizza": 2,
+                "wine": 3,
+                "beef": 3,
             },
             "ordered_on": "2015-08-05T08:40:51.620Z"
             
             }
+            }
+        ]
