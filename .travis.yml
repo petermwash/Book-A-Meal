@@ -12,9 +12,8 @@ script:
     - nosetests tests
 
 #to run coverage tests
-after_success:
-    - cd tests 
-    - coverage run --source='.' test_user.py test_meals.py test_menu.py test_orders.py
+after_success: 
+    - coverage run --source='.' tests
     - coveralls
 cache:
-    -pip
+    - pip
