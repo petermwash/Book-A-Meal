@@ -14,6 +14,8 @@ script:
 
 #to run coverage tests
 after_success: 
+    - coverage run --source='.' --omit='run.py' tests
+    
     -coveralls
 
 cache:
