@@ -13,7 +13,7 @@ script:
 
 #to run coverage tests
 after_success: 
-    - coverage run --source='.' tests
+    - coverage run --source='.' nosetests tests
     - coveralls
 cache:
     - pip
