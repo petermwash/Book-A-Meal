@@ -5,6 +5,7 @@ python:
 #to install dependancies
 install:
     - pip install -r requirements.txt
+    - cat requirements.txt
 
 #to run tests
 script:
@@ -14,6 +15,5 @@ script:
 after_success: 
     - coverage run --source='.' tests/test_user.py, tests/test_meals.py, tests/test_menu.py, tests/test_orders.py
     - coveralls
-
 cache:
     -pip
