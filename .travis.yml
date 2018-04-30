@@ -5,15 +5,14 @@ python:
 #to install dependancies
 install:
     - pip install -r requirements.txt
-    - cat requirements.txt
 
 #to run tests
 script:
     - nosetests tests
 
 #to run coverage tests
-after_success: 
-    - coverage run --source='.' nosetests tests
+after_success:
+    - coverage run --source='.' test_apis.py
     - coveralls
 cache:
     - pip
