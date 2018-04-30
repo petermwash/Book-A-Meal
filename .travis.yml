@@ -4,8 +4,6 @@ python:
 
 #to install dependancies
 install:
-    - export FLASK_APP="run.py"
-    
     - pip install -r requirements.txt
 
 #to run tests
