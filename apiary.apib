@@ -46,7 +46,7 @@ Book-A-Meal is a simple API allowing consumers to view the schema for the inputs
                         
                         "u_name": "pemwa"'
                         "password": "mypass"
-                    }, 
+                    } 
 
 
 + Response 200 (application/json)
@@ -59,12 +59,13 @@ Book-A-Meal is a simple API allowing consumers to view the schema for the inputs
 
             {
                 "meassage": "User loged in"
+                "token": "ejg95jhxzjbjguygnmuiy8yuasjkzxjhy580954y734h"
             }
             
 
 ## Meals Collection [/api/v1/meals]
 
-### create meal options [POST]
+### Create meal options [POST]
 
 + Request (application/json)
 
@@ -99,32 +100,11 @@ Book-A-Meal is a simple API allowing consumers to view the schema for the inputs
 
             {
                 
-                    {
-                        "meal_id": 5,
-                        "meal_name": "burger",
-                        "meal_category": "snacks",
-                        "meal_price": 400.00
-                    }, {
-                        "meal_id": 8,
-                        "meal_name": "pizza",
-                        "meal_category": "main dish",
-                        "meal_price": 900.00
-                    }, {
-                        "meal_id": 15,
-                        "meal_name": "wine",
-                        "meal_category": "drinks",
-                        "meal_price": 850.00
-                    }, {
-                        "meal_id": 2,
-                        "meal_name": "beef",
-                        "meal_category": "main dish",
-                        "meal_price": 700.00
-                    }
-            }
+                   "message": "Meal added"
             
             }
 
-### get the meal options [GET]
+### Get the meal options [GET]
 
 + Response 200 (application/json)
 
@@ -154,10 +134,59 @@ Book-A-Meal is a simple API allowing consumers to view the schema for the inputs
                     }
             }
         ]
+        
+### Update a meal options [PUT]
+
++ Request (application/json)
+
+        {
+                        "meal_id": 2,
+                        "meal_name": "burger",
+                        "meal_category": "snacks",
+                        "meal_price": 400.00
+                    }
+                    
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /api/v1/meals/2
+
+    + Body
+            
+            {
+                    "Message": "Meal updated"
+                
+            }
+
+### Delete a meal options [DELETE]
+
++ Request (application/json)
+
+        {
+                        "meal_id": 2
+                        
+                    }
+                    
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /api/v1/meals/2
+
+    + Body
+            
+            {
+                    "Message": "Meal deleted!"
+                
+            }
+            
+                      
+           
 
 ## Menu Collection [/api/v1/menu]
 
-### set menu for the day [POST]
+### Set menu for the day [POST]
 
 + Request (application/json)
 
@@ -196,32 +225,11 @@ Book-A-Meal is a simple API allowing consumers to view the schema for the inputs
 
             {
                 
-                    {
-                        "meal_id": 2,
-                        "meal_name": "burger",
-                        "meal_category": "snacks",
-                        "meal_price": 400.00
-                    }, {
-                        "meal_id": 3,
-                        "meal_name": "pizza",
-                        "meal_category": "main dish",
-                        "meal_price": 900.00
-                    }, {
-                        "meal_id": 4,
-                        "meal_name": "wine",
-                        "meal_category": "drinks",
-                        "meal_price": 850.00
-                    }, {
-                        "meal_id": 5,
-                        "meal_name": "beef",
-                        "meal_category": "main dish",
-                        "meal_price": 700.00
-                    }
-            }
+                  "message": "Meals added to menu"
             
             }
 
-### get menu for the day [GET]
+### Get menu for the day [GET]
 
 + Response 200 (application/json)
 
@@ -252,35 +260,10 @@ Book-A-Meal is a simple API allowing consumers to view the schema for the inputs
             }
         ]
         
-### update a meal options [PUT]
-
-+ Request (application/json)
-
-        {
-                        "meal_id": 2,
-                        "meal_name": "burger",
-                        "meal_category": "snacks",
-                        "meal_price": 400.00
-                    }
-                    
-+ Response 200 (application/json)
-
-    + Headers
-
-            Location: /api/v1/meals/2
-
-    + Body
-            
-            {
-                    "Message": "Meal updated"
-                
-            }
-            
-           
 
 ## Orders Collection [/api/v1/orders]
 
-### make an order [POST]
+### Make an order [POST]
 
 + Request (application/json)
 
@@ -318,19 +301,11 @@ Book-A-Meal is a simple API allowing consumers to view the schema for the inputs
     + Body
 
              {
-            "order_id": 502,
-            "owner_name": "peter",
-            "order_item": {
-                "burger": 4,
-                "pizza": 2,
-                "wine": 3,
-                "beef": 3
-            },
-            "ordered_on": "2018-04-05T08:40:51.620Z"
             
+            "message": "Order created"
             }
 
-### get orders [GET]
+### Get orders [GET]
 
 + Response 200 (application/json)
 
@@ -373,3 +348,27 @@ Book-A-Meal is a simple API allowing consumers to view the schema for the inputs
             }
             }
         ]
+    
+### Update a order [PUT]
+
++ Request (application/json)
+
+        {
+                        "meal_id": 2,
+                        "meal_name": "burger",
+                        "meal_category": "snacks",
+                        "meal_price": 400.00
+                    }
+                    
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /api/v1/orders/2
+
+    + Body
+            
+            {
+                    "Message": "Order updated"
+                
+            }
