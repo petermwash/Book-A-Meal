@@ -11,7 +11,6 @@ class Order(object):
 		self.order_owner_id = order_owner_name
 		self.meal_name = meal_name
 		self.quantity = quantity
-		#elf.order_items[meal_name] = quantity
 		self.ordered_on = datetime.today()
 
 	def __repr__(self):
