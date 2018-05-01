@@ -18,14 +18,14 @@ Book-A-Meal is a simple API allowing consumers to view the schema for the inputs
                         "email": "pemwa@me.com",
                         "u_name": "pemwa"'
                         "password": "mypass"
-                    }, 
+                    } 
 
 
 + Response 201 (application/json)
 
     + Headers
 
-            Location: /users/signup
+            Location: /api/v1/signup
 
     + Body
 
@@ -53,20 +53,20 @@ Book-A-Meal is a simple API allowing consumers to view the schema for the inputs
 
     + Headers
 
-            Location: /api/v1/signuin
+            Location: /api/v1/meals
 
     + Body
 
             {
-            "meassage": "User loged in"
+                "meassage": "User loged in"
             }
             
-            }
 
 ## Meals Collection [/api/v1/meals]
 
 ### create meal options [POST]
 
++ Request (application/json)
 
             {
                 
@@ -159,6 +159,7 @@ Book-A-Meal is a simple API allowing consumers to view the schema for the inputs
 
 ### set menu for the day [POST]
 
++ Request (application/json)
 
             {
                 
@@ -281,6 +282,7 @@ Book-A-Meal is a simple API allowing consumers to view the schema for the inputs
 
 ### make an order [POST]
 
++ Request (application/json)
 
             {
                 
